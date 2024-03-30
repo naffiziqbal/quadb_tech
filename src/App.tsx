@@ -1,9 +1,9 @@
-import React from 'react';
+import MainLayout from "./layout/MainLayout";
 
 const App = () => {
   return (
     <div>
-      This is React App
+      <MainLayout />
     </div>
   );
 };

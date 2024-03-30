@@ -8,27 +8,32 @@ const Home = () => {
   const { todo_list } = useAppSelector((state) => state.todoSlice);
 
   return (
-    <>
+    <div className="">
       {todo_list.length > 0 && (
         <h3 className="mt-5 text-2xl font-bold border-b-2 border-b-emerald-500 w-fit mx-3">
           {" "}
           Today's Tasks
         </h3>
       )}
-      <div className="w-full  flex flex-col h-fit px-4 gap-5 rounded-md mt-12">
+      <div className="w-full  flex flex-col h-screen overflow-auto px-4 gap-5 rounded-md mt-12">
         {todo_list.length ? (
           todo_list.map((data, idx) => (
-            <ul className="flex border-b cursor-pointer gap-3 min-h-12 items-center  px-2">
-              <li className="*:mr-2" onClick={() => dispatch(completed(data))}>
-                <span>{(idx += 1)}.</span>
-                <span>{data.name}</span>
-              </li>{" "}
-              <span
-                className="absolute right-10"
-                onClick={() => dispatch(remove(data))}
+            <ul className="flex border-b cursor-pointer gap-3 min-h-12 max-h-screen items-center  px-2">
+              <li
+                className="*:mr-2 w-full flex justify-between"
+                onClick={() => dispatch(completed(data))}
               >
-                <BsTrash2Fill className="text-red-500 h-6 w-6 cursor-pointer" />
-              </span>
+                <div>
+                  <span>{(idx += 1)}.</span>
+                  <span>{data.name}</span>
+                </div>
+                <span
+                  className="right-10"
+                  onClick={() => dispatch(remove(data))}
+                >
+                  <BsTrash2Fill className="text-red-500 h-6 w-6 cursor-pointer" />
+                </span>
+              </li>{" "}
             </ul>
           ))
         ) : (
@@ -48,7 +53,7 @@ const Home = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

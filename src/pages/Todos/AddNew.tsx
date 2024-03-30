@@ -22,24 +22,26 @@ const AddNew = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-full leading-10">
-      <section className="hidden md:flex items-center justify-center mx-auto h-fit ">
+    <div className="flex flex-col md:items-center w-full h-screen px-5 *:my-5">
+      <section className="flex md:flex-row flex-col md:items-center justify-center mx-auto h-fit">
         <img src={image} className="w-[600px]" alt="Add New" />
-        <section>
+        <section className="*:my-6">
           {" "}
           <h3 className="text-3xl font-semibold">
-            Remember What Get Measured Get Managed!
+            Remember, <br />{" "}
+            <strong className="text-emerald-500">What Get Measured</strong>{" "}
+            <br /> Get Managed!
           </h3>
           <p>Add new Task to manage your day! Never Procrastinate</p>
         </section>
       </section>
-      <form onSubmit={handleSubmit} className="w-full md:w-1/2 flex">
+      <form onSubmit={handleSubmit} className="w-full md:w-1/2 flex leading-10">
         <input
           type="text"
           onChange={handleText}
           value={text}
           placeholder="What's in your mind?"
-          className=" w-full rounded-s px-3 ring ring-emerald-500  outline-none"
+          className=" w-full rounded-s px-3  ring ring-emerald-500  outline-none"
         />
         <input
           type="submit"

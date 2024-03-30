@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Nav = ({ menuOpen, setMenuOpen }: any) => {
   return (
     <nav
-      className={`md:w-1/3 w-full shadow bg-[#def7e5] h-screen flex flex-col  absolute lg:relative duration-500 font-semibold  *:mx-12 *:my-2 pt-12  *:text-lg *:flex *:items-center *:gap-4 ${
+      className={`md:w-1/2 w-full shadow bg-[#def7e5] h-screen flex flex-col  absolute lg:relative duration-500 font-semibold  *:mx-12 *:my-2 pt-12  *:text-lg *:flex *:items-center *:gap-4 ${
         !menuOpen ? "-m-[300rem] duration-500 md:m-0" : "m-0 duration-500"
       }`}
     >

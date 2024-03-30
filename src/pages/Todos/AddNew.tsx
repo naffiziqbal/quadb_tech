@@ -22,14 +22,17 @@ const AddNew = () => {
   };
 
   return (
-    <div className="flex flex-col md:items-center w-full h-screen px-5 *:my-5">
-      <section className="flex md:flex-row flex-col md:items-center justify-center mx-auto h-fit">
-        <img src={image} className="w-[600px]" alt="Add New" />
+    <div className="flex flex-col md:items-center  w-full px-5 md:px-0 *:my-6 my-12">
+      <section className="flex lg:flex-row flex-col md:items-center justify-between mx-auto h-fit w-full">
+        <figure className=" w-full max:w-[600px] ">
+          <img src={image} className=" object-fill" alt="Add New" />
+        </figure>
         <section className="*:my-6">
-          {" "}
           <h3 className="text-3xl font-semibold">
             Remember, <br />{" "}
-            <strong className="text-emerald-500">What Get Measured</strong>{" "}
+            <strong className="text-emerald-500 text-nowrap">
+              What Get Measured
+            </strong>{" "}
             <br /> Get Managed!
           </h3>
           <p>Add new Task to manage your day! Never Procrastinate</p>

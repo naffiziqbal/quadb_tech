@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
 import { completed, remove } from "../../redux/todo/todoSlice";
 import image from "../../assets/convertible car-bro.svg";
@@ -20,7 +19,8 @@ const Home = () => {
         <div>
           <img className="w-full object-cover" src={image} alt="No Todo" />
           <h3 className="text-2xl font-bold my-6">
-            <span className="text-emerald-400">Well Done!</span> You Have No more Task Today
+            <span className="text-emerald-400">Well Done!</span> You Have No
+            more Task Today
           </h3>
         </div>
       )}

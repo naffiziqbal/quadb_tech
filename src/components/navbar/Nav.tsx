@@ -8,7 +8,7 @@ const Nav = ({ menuOpen, setMenuOpen }: any) => {
   return (
     <nav
       className={`md:w-1/2 w-full shadow bg-[#def7e5] h-screen flex flex-col  absolute lg:relative duration-500 font-semibold  *:mx-12 *:my-2 pt-12  *:text-lg *:flex *:items-center *:gap-4 ${
-        !menuOpen ? "-m-[300rem] duration-500 md:m-0" : "m-0 duration-500"
+        !menuOpen ? "-m-[300rem] duration-500 lg:m-0" : "m-0 duration-500"
       }`}
     >
       <Link to={"/"} onClick={() => setMenuOpen(false)}>
@@ -24,7 +24,7 @@ const Nav = ({ menuOpen, setMenuOpen }: any) => {
         <BsTrash2Fill className="text-red-500" /> Deleted
       </Link>
       <span
-        className="absolute right-0 top-0 lg:hidden"
+        className="absolute right-0 top-0 lg:hidden cursor-pointer"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         X

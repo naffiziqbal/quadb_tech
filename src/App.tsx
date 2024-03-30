@@ -2,7 +2,7 @@ import MainLayout from "./layout/MainLayout";
 
 const App = () => {
   return (
-    <div>
+    <div className="lg:container mx-auto">
       <MainLayout />
     </div>
   );
